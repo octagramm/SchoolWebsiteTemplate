@@ -4,15 +4,31 @@ description = "Default layout"
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Winter CMS - {{ this.page.title }}</title>
+        <title>Школа №123 - {{ this.page.title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="{{ this.page.meta_description }}">
         <meta name="title" content="{{ this.page.meta_title }}">
-        <meta name="author" content="Winter CMS">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="generator" content="Winter CMS">
-        <link rel="icon" type="image/png" href="{{ 'assets/images/winter.png'|theme }}">
-        <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
-        <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
+        <meta name="author" content="Octagramma">
+
+        <meta name="generator" content="Octagramma">
+
+        <!-- bootstrap.min css -->
+        <link rel="stylesheet" href="{{ 'assets/vendor/bootstrap/css/bootstrap.min.css'|theme }}">
+        <!-- Icofont Css -->
+        <link rel="stylesheet" href="{{ 'assets/vendor/icofont/icofont.min.css'|theme }}">
+        <!-- Themify Css -->
+        <link rel="stylesheet" href="{{ 'assets/vendor/themify/css/themify-icons.css'|theme }}">
+        <!-- animate.css -->
+        <link rel="stylesheet" href="{{ 'assets/vendor/animate-css/animate.css'|theme }}">
+        <!-- Magnify Popup -->
+        <link rel="stylesheet" href="{{ 'assets/vendor/magnific-popup/dist/magnific-popup.css'|theme }}">
+        <!-- Owl Carousel CSS -->
+        <link rel="stylesheet" href="{{ 'assets/vendor/slick-carousel/slick/slick.css'|theme }}">
+        <link rel="stylesheet" href="{{ 'assets/vendor/slick-carousel/slick/slick-theme.css'|theme }}">
+        <!-- Main Stylesheet -->
+        <link rel="stylesheet" href="{{ 'assets/css/style.css'|theme }}">
+
+        <link rel="icon" href="{{ 'assets/svg/logo.svg'|theme }}">
         {% styles %}
     </head>
     <body>
@@ -33,9 +49,24 @@ description = "Default layout"
         </footer>
 
         <!-- Scripts -->
-        <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
-        <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
-        <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
+
+        <!-- Main jQuery -->
+        <script src="{{ 'assets/vendor/jquery/jquery.js'|theme }}"></script>
+        <!-- Bootstrap 4.3.1 -->
+        <script src="{{ 'assets/vendor/bootstrap/js/bootstrap.min.js'|theme }}"></script>
+        <!-- Slick Slider -->
+        <script src="{{ 'assets/vendor/slick-carousel/slick/slick.min.js'|theme }}"></script>
+        <!--  Magnific Popup-->
+        <script src="{{ 'assets/vendor/magnific-popup/dist/jquery.magnific-popup.min.js'|theme }}"></script>
+        <!-- Form Validator -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
+        <!-- Google Map -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
+        <script src="{{ 'assets/vendor/google-map/gmap.js'|theme }}"></script>
+
+        <script src="{{ 'assets/javascript/script.js'|theme }}"></script>
+
         {% snowboard all %}
         {% scripts %}
 

@@ -4,26 +4,51 @@ function onStart()
     $this['backendUrl'] = Backend::url('/');
 }
 ==
-<!-- Nav -->
-<nav id="layout-nav" class="navbar navbar-inverse navbar-fixed-top navbar-autohide" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="{{ 'home'|page }}">Winter Demo</a>
-        </div>
-        <div class="collapse navbar-collapse navbar-main-collapse">
-            <ul class="nav navbar-nav">
-                <li class="separator hidden-xs"></li>
-                <li class="{% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'home'|page }}">Basic concepts</a></li>
-                <li class="{% if this.page.id == 'ajax' %}active{% endif %}"><a href="{{ 'ajax'|page }}">AJAX framework</a></li>
-                <li class="{% if this.page.id == 'plugins' %}active{% endif %}"><a href="{{ 'plugins'|page }}">Plugin components</a></li>
-                <li><a href="{{ backendUrl }}">Sign in to the Backend</a></li>
+<!-- Header Start -->
+<nav class="navbar navbar-expand-lg navigation fixed-top" id="navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+            <h2 class="text-white text-capitalize">Школа <span class="text-color">№123</span></h2>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsid"
+                aria-controls="navbarsid" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="ti-view-list"></span>
+        </button>
+        <div class="collapse text-center navbar-collapse" id="navbarsid">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false">Pages.</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="about.html">About</a></li>
+                        <li><a class="dropdown-item" href="trainer.html">Trainer</a></li>
+                        <li><a class="dropdown-item" href="course.html">Courses</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="pricing.html">Memebership</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false">Blog.</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="blog.html">Blog Grid</a></li>
+                        <li><a class="dropdown-item" href="blog-sidebar.html">Blog Sidebar</a></li>
+                        <li><a class="dropdown-item" href="blog-single.html">Blog Details</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
+            <div class="my-md-0 ml-lg-4 mt-4 mt-lg-0 ml-auto text-lg-right mb-3 mb-lg-0">
+                <a href="tel:+23-345-67890">
+                    <h3 class="text-color mb-0"><i class="ti-mobile mr-2"></i>+7(999)-999-9999</h3>
+                </a>
+            </div>
         </div>
     </div>
 </nav>
+
+
+<!-- Header Close -->
