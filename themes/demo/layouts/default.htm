@@ -4,7 +4,7 @@ description = "Default layout"
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Школа №123 - {{ this.page.title }}</title>
+        <title>{{ name }} - {{ this.page.title }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="{{ this.page.meta_description }}">
         <meta name="title" content="{{ this.page.meta_title }}">
@@ -39,9 +39,10 @@ description = "Default layout"
         </header>
 
         <!-- Content -->
-        <section id="layout-content">
+        <div class="main-wrapper ">
+            {% partial 'site/page_title' %}
             {% page %}
-        </section>
+        </div>
 
         <!-- Footer -->
         <footer id="layout-footer">
