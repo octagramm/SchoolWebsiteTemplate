@@ -27,6 +27,7 @@ description = "Default layout"
         <link rel="stylesheet" href="{{ 'assets/vendor/slick-carousel/slick/slick-theme.css'|theme }}">
         <!-- Main Stylesheet -->
         <link rel="stylesheet" href="{{ 'assets/css/style.css'|theme }}">
+        <link rel="stylesheet" href="{{ 'assets/css/bvi.min.css'|theme }}">
 
         <link rel="icon" href="{{ 'assets/svg/logo.svg'|theme }}">
         {% styles %}
@@ -67,7 +68,14 @@ description = "Default layout"
         <script src="{{ 'assets/vendor/google-map/gmap.js'|theme }}"></script>
 
         <script src="{{ 'assets/javascript/script.js'|theme }}"></script>
-
+        <script src="{{ 'assets/javascript/bvi.js'|theme }}"></script>
+        <script>
+            new isvek.Bvi({
+                target: '.className',
+                fontSize: 24,
+                theme: 'black'
+            });
+        </script>
         {% snowboard all %}
         {% scripts %}
 
