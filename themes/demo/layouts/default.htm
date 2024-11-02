@@ -1,4 +1,11 @@
 description = "Default layout"
+
+[staticPage]
+useContent = 1
+default = 0
+
+[staticMenu]
+code = "header"
 ==
 <!DOCTYPE html>
 <html>
@@ -33,7 +40,8 @@ description = "Default layout"
         {% styles %}
     </head>
     <body>
-
+    {% component 'staticPage' %}
+    {% component 'staticBreadcrumbs' %}
         <!-- Header -->
         <header id="layout-header">
             {% partial 'site/header' %}
@@ -42,6 +50,8 @@ description = "Default layout"
         <!-- Content -->
         <div class="main-wrapper ">
             {% partial 'site/page_title' %}
+            {% component 'staticMenu' %}
+
             {% page %}
         </div>
 

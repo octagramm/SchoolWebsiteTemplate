@@ -9,7 +9,9 @@
 
 :root {
     --style-color-primary: rgb(245, 99, 75);
+    /*--style-color-primary: rgb(0, 225, 255);*/
     --style-color-primary-gradient: #fe9418;
+    /*--style-color-primary-gradient: #0053ff;*/
     --style-color-white: #fff;
     --style-color-black: #000;
     --style-color-dark: #232323;

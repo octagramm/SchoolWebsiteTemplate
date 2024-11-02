@@ -1,0 +1,183 @@
+[staticPage]
+useContent = 1
+default = 0
+
+[staticMenu]
+code = "header"
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ name }} - {{ this.page.title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="author" content="Octagramma">
+
+        <meta name="generator" content="Octagramma">
+
+        <!-- bootstrap.min css -->
+        <link rel="stylesheet" href="{{ 'assets/vendor/bootstrap/css/bootstrap.min.css'|theme }}">
+        <!-- Icofont Css -->
+        <link rel="stylesheet" href="{{ 'assets/vendor/icofont/icofont.min.css'|theme }}">
+        <!-- Themify Css -->
+        <link rel="stylesheet" href="{{ 'assets/vendor/themify/css/themify-icons.css'|theme }}">
+        <!-- animate.css -->
+        <link rel="stylesheet" href="{{ 'assets/vendor/animate-css/animate.css'|theme }}">
+        <!-- Magnify Popup -->
+        <link rel="stylesheet" href="{{ 'assets/vendor/magnific-popup/dist/magnific-popup.css'|theme }}">
+        <!-- Owl Carousel CSS -->
+        <link rel="stylesheet" href="{{ 'assets/vendor/slick-carousel/slick/slick.css'|theme }}">
+        <link rel="stylesheet" href="{{ 'assets/vendor/slick-carousel/slick/slick-theme.css'|theme }}">
+        <!-- Main Stylesheet -->
+        <link rel="stylesheet" href="{{ 'assets/css/style.css'|theme }}">
+        <link rel="stylesheet" href="{{ 'assets/css/bvi.min.css'|theme }}">
+
+        <link rel="icon" href="{{ 'assets/svg/logo.svg'|theme }}">
+        {% styles %}
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navigation fixed-top" id="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{{ 'home'|page }}">
+                    <h2 class="text-white text-capitalize">{{ orgName }} <span class="text-color">{{ orgNumber }}</span></h2>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsid"
+                        aria-controls="navbarsid" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="ti-view-list"></span>
+                </button>
+                <div class="collapse text-center navbar-collapse" id="navbarsid">
+                    {% component 'topMenuLeft' %}
+
+                    {% partial 'menu-items' items=staticMenu.menuItems class='nav navbar-nav' %}
+                </div>
+            </div>
+            <a href="#" class="className btn btn-main text-white">Версия для слабовидящих</a>
+        </nav>
+        
+        <div class="main-wrapper">
+            <section class="page-title bg-2">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-12 text-center">
+                      <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="{{ 'glavnaya'|staticPage }}" class="text-sm letter-spacing text-white text-uppercase font-weight-bold">Главная</a></li>
+                        <li class="list-inline-item"><span class="text-white">|</span></li>
+                        <li class="list-inline-item"><a href="{{ 'svedeniya-ob-obrazovatelnoj-organizacii-osnovnye-svedeniya'|staticPage }}" class="text-color text-uppercase text-sm letter-spacing">О нас</a></li>
+                      </ul>
+                       <h1 class="text-lg text-white mt-2">{{ this.page.title }}</h1>
+                  </div>
+                </div>
+              </div>
+            </section>
+            
+            <section class="section">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <div class="about-item position-relative mt-5 mt-lg-0">
+                              
+                                {% page %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer bg-black-50">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+                        <h2 class="text-white mb-4">{{ name }}</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus illo ad quo sunt maiores, sint nostrum omnis eaque cumque dolorum.</p>
+        
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+        
+        
+                    <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                        <div class="footer-widget recent-blog">
+                            <h4 class="mb-4 text-white letter-spacing text-uppercase">Последние новости</h4>
+                            <div>
+                                <a href="blog-single.html"class="text-white">Claritas est etiam processus dynamicus</a>
+                                <p class="text-sm mt-2 text-white-50">01 сентября 2024</p>
+                            </div>
+                            <div>
+                                <a href="blog-single.html"class="text-white">Claritas est etiam processus dynamicus</a>
+                                <p class="text-sm mt-2 text-white-50">01 января 2024</p>
+                            </div>
+        
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-5 mb-5 mb-lg-0">
+                        <div class="footer-widget">
+                            <h4 class="mb-4 text-white letter-spacing text-uppercase">Ссылки</h4>
+                            <ul class="list-unstyled footer-menu lh-40 mb-0">
+                                <li><a href="{{ 'about'|page }}"><i class="ti-angle-double-right mr-2"></i>Основная информация</a></li>
+                                <li><a href="#"><i class="ti-angle-double-right mr-2"></i>Services</a></li>
+                                <li><a href="#"><i class="ti-angle-double-right mr-2"></i>Membership</a></li>
+                                <li><a href="#"><i class="ti-angle-double-right mr-2"></i>Courses</a></li>
+                                <li><a href="#"><i class="ti-angle-double-right mr-2"></i>Contact us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-5">
+                        <div class="footer-widget">
+                            <h4 class="mb-4 text-white letter-spacing text-uppercase">Адрес</h4>
+                            <p>
+                                185035, Россия, Республика Карелия, г. Петрозаводск, пр. Ленина, 2
+                            </p>
+                            <span class="text-white">{{ phoneNumber }}</span>
+                            <span class="text-white">{{ emailAddress }}</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="row align-items-center mt-5 px-3 bg-black mx-1">
+                    <div class="col-lg-4">
+                        <p class="text-white mt-3">Октаграмма &copy; {{ "now" | date("Y") }}, <a href="https://octagramma.ru/" class="text-color">Octagramma.ru</a></p>
+                    </div>
+        <!--            <div class="col-lg-6 ml-auto text-right">-->
+        <!--                <ul class="list-inline mb-0 footer-socials">-->
+        <!--                    <li class="list-inline-item"><a href="https://www.facebook.com/themefisher"><i class="ti-facebook"></i></a></li>-->
+        <!--                    <li class="list-inline-item"><a href="https://twitter.com/themefisher"><i class="ti-twitter"></i></a></li>-->
+        <!--                    <li class="list-inline-item"><a href="https://github.com/themefisher/"><i class="ti-github"></i></a></li>-->
+        <!--                </ul>-->
+        <!--            </div>-->
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+
+        <!-- Main jQuery -->
+        <script src="{{ 'assets/vendor/jquery/jquery.js'|theme }}"></script>
+        <!-- Bootstrap 4.3.1 -->
+        <script src="{{ 'assets/vendor/bootstrap/js/bootstrap.min.js'|theme }}"></script>
+        <!-- Slick Slider -->
+        <script src="{{ 'assets/vendor/slick-carousel/slick/slick.min.js'|theme }}"></script>
+        <!--  Magnific Popup-->
+        <script src="{{ 'assets/vendor/magnific-popup/dist/jquery.magnific-popup.min.js'|theme }}"></script>
+        <!-- Form Validator -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
+        <!-- Google Map -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
+        <script src="{{ 'assets/vendor/google-map/gmap.js'|theme }}"></script>
+
+        <script src="{{ 'assets/javascript/script.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/bvi.js'|theme }}"></script>
+        <script>
+            new isvek.Bvi({
+                target: '.className',
+                fontSize: 24,
+                theme: 'black'
+            });
+        </script>
+        {% snowboard all %}
+        {% scripts %}
+    
+    </body>
+</html>

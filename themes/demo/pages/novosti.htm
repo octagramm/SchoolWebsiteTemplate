@@ -1,0 +1,22 @@
+title = "Новости"
+url = "/novosti/:slug/:page?."
+layout = "static-layout"
+is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "{{ :slug }}"
+postsPerPage = 3
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = 404
+postPage = 404
+==
+<?php
+function onInit()
+{
+    $this['activeMenuItem'] = 'news';
+}
+?>
+==
+{% component 'blogPosts' %}

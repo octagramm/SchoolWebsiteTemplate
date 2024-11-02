@@ -1,0 +1,11 @@
+[viewBag]
+==
+<ul class="dropdown-menu">
+    {% for item in items %} 
+        <li>
+            <a class="dropdown-item" href="{{ item.url }}">
+                {{ item.title }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>

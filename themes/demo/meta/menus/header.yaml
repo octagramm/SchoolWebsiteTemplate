@@ -1,0 +1,28 @@
+items:
+    -
+        title: 'All pages'
+        nesting: false
+        type: all-static-pages
+        url: null
+        code: ''
+        reference: null
+        cmsPage: null
+        replace: 1
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Новости
+        nesting: false
+        type: url
+        url: /news
+        code: news
+        reference: null
+        cmsPage: null
+        replace: false
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: header

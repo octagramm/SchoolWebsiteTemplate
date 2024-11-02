@@ -1,0 +1,24 @@
+[viewBag]
+==
+<ul class="navbar-nav mx-auto">
+    {% for item in items %} 
+        <li class="nav-item 
+        {{ item.isActive or item.isChildActive ? 'active' : '' }}
+        {{ item.items ? 'dropdown' : '' }}"
+        >
+            <a
+            {% if item.items %}
+            class="nav-link dropdown-toggle" data-toggle="dropdown"
+            {% else %}
+            a class="nav-link"
+            {% endif %} 
+            href="{{ item.url }}">
+                {{ item.title }}
+            </a>
+            
+             {% if item.items %}
+                {% partial 'dropdown-items' items=item.items%}
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>
