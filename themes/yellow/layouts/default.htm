@@ -10,6 +10,9 @@ code = "menu"
 
 [contenteditor]
 file = "static-pages/glavnaya.htm"
+
+[staticMenu blogCategoriesMenu]
+code = "blog-categories"
 ==
 <!DOCTYPE html>
 <html lang="en">
@@ -57,12 +60,11 @@ file = "static-pages/glavnaya.htm"
             <div class="row">
                 <div class="col-lg-8 col-md-8">
                     <ul class="top-info text-center text-md-left">
-                        <li><i class="fas fa-map-marker-alt"></i><p class="info-text">{% component 'contenteditor' file="editor/info.htm" %}</p>
+                        <li><i class="fas fa-map-marker-alt"></i>{% component 'contenteditor' file="editor/address.htm" fixture="p" class="info-text" %}
                         </li>
                     </ul>
                 </div>
                 <!--/ Top info end -->
-
                 <div class="col-lg-4 col-md-4 top-social text-center text-md-right">
                     <ul class="list-unstyled">
                         <li>
@@ -151,7 +153,6 @@ file = "static-pages/glavnaya.htm"
         <!--/ Navigation end -->
     </header>
     <!--/ Header end -->
-
     <div class="banner-carousel banner-carousel-1 mb-0">
         <div class="banner-carousel-item" style="background-image:url({{ 'assets/images/slider-main/school.jpg'|theme }})">
             <div class="slider-content">
@@ -224,9 +225,7 @@ file = "static-pages/glavnaya.htm"
                     <div class="ts-intro">
                         <h2 class="into-title">О нас</h2>
                         {% component 'contenteditor' fixture="h3" file="editor/school.htm" class="into-sub-title" %}
-
-<!--                        <h3 class="into-sub-title">Школа №123</h3>-->
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
+                        {% component 'contenteditor' file="editor/service/desc.htm" fixture="p" class="" %}
                     </div><!-- Intro box end -->
 
                     <div class="gap-20"></div>
@@ -238,7 +237,7 @@ file = "static-pages/glavnaya.htm"
                       <i class="fas fa-trophy"></i>
                     </span>
                                 <div class="ts-service-box-content">
-                                    <h3 class="service-box-title">30 медалистов</h3>
+                                {% component 'contenteditor' file="editor/service/1.htm" fixture="h3" class="service-box-title" %}
                                 </div>
                             </div><!-- Service 1 end -->
                         </div><!-- col end -->
@@ -249,7 +248,7 @@ file = "static-pages/glavnaya.htm"
                       <i class="fas fa-sliders-h"></i>
                     </span>
                                 <div class="ts-service-box-content">
-                                    <h3 class="service-box-title">Индивидуальный подход</h3>
+                                {% component 'contenteditor' file="editor/service/2.htm" fixture="h3" class="service-box-title" %}
                                 </div>
                             </div><!-- Service 2 end -->
                         </div><!-- col end -->
@@ -262,8 +261,7 @@ file = "static-pages/glavnaya.htm"
                       <i class="fas fa-thumbs-up"></i>
                     </span>
                                 <div class="ts-service-box-content">
-                                    <h3 class="service-box-title">Качественное образование</h3>
-                                </div>
+                                {% component 'contenteditor' file="editor/service/3.htm" fixture="h3" class="service-box-title" %}                                </div>
                             </div><!-- Service 1 end -->
                         </div><!-- col end -->
 
@@ -273,7 +271,7 @@ file = "static-pages/glavnaya.htm"
                       <i class="fas fa-users"></i>
                     </span>
                                 <div class="ts-service-box-content">
-                                    <h3 class="service-box-title">Лучший педагогический состав</h3>
+                                {% component 'contenteditor' file="editor/service/4.htm" fixture="h3" class="service-box-title" %}
                                 </div>
                             </div><!-- Service 2 end -->
                         </div><!-- col end -->
@@ -281,50 +279,43 @@ file = "static-pages/glavnaya.htm"
                 </div><!-- Col end -->
 
                 <div class="col-lg-6 mt-4 mt-lg-0">
-                    <h3 class="into-sub-title">Наши ценности</h3>
-
+                {% component 'contenteditor' file="editor/service/title.htm" fixture="h3" class="into-sub-title" %}
                     <div class="accordion accordion-group" id="our-values-accordion">
                         <div class="card">
                             <div class="card-header p-0 bg-transparent" id="headingOne">
                                 <h2 class="mb-0">
                                     <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Качество
+                                        {% component 'contenteditor' file="editor/service/collapse_1.htm" fixture="italic" class="" %}
                                     </button>
                                 </h2>
                             </div>
 
                             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#our-values-accordion">
-                                <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidata
-                                </div>
+                            {% component 'contenteditor' file="editor/service/collapse_1_desc.htm" fixture="div" class="card-body" %}
                             </div>
                         </div>
                         <div class="card">
                             <div class="card-header p-0 bg-transparent" id="headingTwo">
                                 <h2 class="mb-0">
                                     <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Индивидуальных подход
+                                        {% component 'contenteditor' file="editor/service/collapse_2.htm" fixture="italic" class="" %}
                                     </button>
                                 </h2>
                             </div>
                             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#our-values-accordion">
-                                <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidata
-                                </div>
+                                {% component 'contenteditor' file="editor/service/collapse_2_desc.htm" fixture="div" class="card-body" %}
                             </div>
                         </div>
                         <div class="card">
                             <div class="card-header p-0 bg-transparent" id="headingThree">
                                 <h2 class="mb-0">
                                     <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Результат
+                                        {% component 'contenteditor' file="editor/service/collapse_3.htm" fixture="italic" class="" %}
                                     </button>
                                 </h2>
                             </div>
                             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#our-values-accordion">
-                                <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidata
-                                </div>
+                                {% component 'contenteditor' file="editor/service/collapse_3_desc.htm" fixture="div" class="card-body" %}
                             </div>
                         </div>
                     </div>
@@ -351,7 +342,7 @@ file = "static-pages/glavnaya.htm"
 
                     <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-sm-0">
                         <div class="ts-facts-img">
-                            <img loading="lazy" src="{{ 'assets/images/icon-image/fact2.png'|theme }}" alt="facts-img">
+                            <img loading="lazy" src="{{ 'assets/images/icon-image/service-icon3.png'|theme }}" alt="facts-img">
                         </div>
                         <div class="ts-facts-content">
                             <h2 class="ts-facts-num"><span class="counterUp" data-count="30">0</span></h2>
@@ -390,8 +381,8 @@ file = "static-pages/glavnaya.htm"
         <div class="container">
             <div class="row text-center">
                 <div class="col-12">
-                    <h2 class="section-title">...</h2>
-                    <h3 class="section-sub-title">Обучение</h3>
+                    {% component 'contenteditor' file="editor/education/title.htm" fixture="h2" class="section-title" %}
+                    {% component 'contenteditor' file="editor/education/subtitle.htm" fixture="h3" class="section-sub-title" %}
                 </div>
             </div>
             <!--/ Title row end -->
@@ -403,8 +394,10 @@ file = "static-pages/glavnaya.htm"
 <!--                            <img loading="lazy" src="{{ 'assets/images/icon-image/service-icon1.png'|theme }}" alt="service-icon">-->
                         </div>
                         <div class="ts-service-box-info">
-                            <h3 class="service-box-title"><a href="#">Иностранные языки</a></h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
+                            <h3 class="service-box-title">
+                                {% component 'contenteditor' file="editor/education/section_1.htm" fixture="a" class="" %}
+                            </h3>
+                            {% component 'contenteditor' file="editor/education/section_1_desc.htm" fixture="p" class="" %}
                         </div>
                     </div><!-- Service 1 end -->
 
@@ -413,8 +406,10 @@ file = "static-pages/glavnaya.htm"
 <!--                            <img loading="lazy" src="{{ 'assets/images/icon-image/service-icon2.png'|theme }}" alt="service-icon">-->
                         </div>
                         <div class="ts-service-box-info">
-                            <h3 class="service-box-title"><a href="#">Информатика и ИТ</a></h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
+                            <h3 class="service-box-title">
+                                {% component 'contenteditor' file="editor/education/section_2.htm" fixture="a" class="" %}
+                            </h3>
+                            {% component 'contenteditor' file="editor/education/section_2_desc.htm" fixture="p" class="" %}
                         </div>
                     </div><!-- Service 2 end -->
 
@@ -423,8 +418,10 @@ file = "static-pages/glavnaya.htm"
 <!--                            <img loading="lazy" src="{{ 'assets/images/icon-image/service-icon3.png'|theme }}"  alt="service-icon">-->
                         </div>
                         <div class="ts-service-box-info">
-                            <h3 class="service-box-title"><a href="#">Русский язык и литература</a></h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
+                            <h3 class="service-box-title">
+                                {% component 'contenteditor' file="editor/education/section_3.htm" fixture="a" class="" %}
+                            </h3>
+                            {% component 'contenteditor' file="editor/education/section_3_desc.htm" fixture="p" class="" %}
                         </div>
                     </div><!-- Service 3 end -->
 
@@ -440,8 +437,10 @@ file = "static-pages/glavnaya.htm"
 <!--                            <img loading="lazy" src="{{ 'assets/images/icon-image/service-icon4.png'|theme }}" alt="service-icon">-->
                         </div>
                         <div class="ts-service-box-info">
-                            <h3 class="service-box-title"><a href="#">Математика</a></h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
+                            <h3 class="service-box-title">
+                                {% component 'contenteditor' file="editor/education/section_4.htm" fixture="a" class="" %}
+                            </h3>
+                            {% component 'contenteditor' file="editor/education/section_4_desc.htm" fixture="p" class="" %}
                         </div>
                     </div><!-- Service 4 end -->
 
@@ -450,8 +449,10 @@ file = "static-pages/glavnaya.htm"
 <!--                            <img loading="lazy" src="{{ 'assets/images/icon-image/service-icon5.png'|theme }}" alt="service-icon">-->
                         </div>
                         <div class="ts-service-box-info">
-                            <h3 class="service-box-title"><a href="#">Физика</a></h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
+                            <h3 class="service-box-title">
+                                {% component 'contenteditor' file="editor/education/section_5.htm" fixture="a" class="" %}
+                            </h3>
+                            {% component 'contenteditor' file="editor/education/section_5_desc.htm" fixture="p" class="" %}
                         </div>
                     </div><!-- Service 5 end -->
 
@@ -460,8 +461,10 @@ file = "static-pages/glavnaya.htm"
 <!--                            <img loading="lazy" src="{{ 'assets/images/icon-image/service-icon6.png'|theme }}" alt="service-icon">-->
                         </div>
                         <div class="ts-service-box-info">
-                            <h3 class="service-box-title"><a href="#">История</a></h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
+                            <h3 class="service-box-title">
+                                {% component 'contenteditor' file="editor/education/section_6.htm" fixture="a" class="" %}
+                            </h3>
+                            {% component 'contenteditor' file="editor/education/section_6_desc.htm" fixture="p" class="" %}
                         </div>
                     </div><!-- Service 6 end -->
                 </div><!-- Col end -->
@@ -852,28 +855,31 @@ file = "static-pages/glavnaya.htm"
         <!--/ Container end -->
     </section>
     <!--/ News end -->
-    {% partial "site/header" %}
-
-    {% page %}
-
-    {% partial "site/footer" %}
 
     <footer id="footer" class="footer bg-overlay">
         <div class="footer-main">
             <div class="container">
                 <div class="row justify-content-between">
                     <div class="col-lg-4 col-md-6 footer-widget footer-about">
-                        <h3 class="widget-title">О нас</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inci done idunt ut
-                            labore et dolore magna aliqua.</p>
+                        {% component 'contenteditor' file="editor/footer/col_1.htm" fixture="h3" class="widget-title" %}
+                        {% component 'contenteditor' file="editor/footer/col_1_desc.htm" fixture="p" class="" %}
                     </div><!-- Col end -->
 
                     <div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0">
-                        <h3 class="widget-title">Режим работы</h3>
+                        {% component 'contenteditor' file="editor/footer/col_2.htm" fixture="h3" class="widget-title" %}
                         <div class="working-hours">
-                            Понедельник - Пятница: <span class="text-right">8:00 - 20:00 </span>
-                            <br> Суббота: <span class="text-right">8:00 - 16:00</span>
-                            <br> Воскресенье: <span class="text-right">выходной</span>
+                            {% component 'contenteditor' file="editor/footer/col_2_1.htm" fixture="italic" class="" %}
+                            {% component 'contenteditor' file="editor/footer/col_2_1_desc.htm" fixture="span" class="text-right" %}
+
+<!--                            <span class="text-right">8:00 - 20:00 </span>-->
+                            <br>
+                            {% component 'contenteditor' file="editor/footer/col_2_2.htm" fixture="italic" class="" %}
+                            {% component 'contenteditor' file="editor/footer/col_2_2_desc.htm" fixture="span" class="text-right" %}
+
+                            <br>
+                            {% component 'contenteditor' file="editor/footer/col_2_3.htm" fixture="italic" class="" %}
+                            {% component 'contenteditor' file="editor/footer/col_2_3_desc.htm" fixture="span" class="text-right" %}
+
                         </div>
                     </div><!-- Col end -->
 

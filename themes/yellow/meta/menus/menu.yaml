@@ -1,8 +1,12 @@
 items:
     -
         title: Menu
+        nesting: false
         type: all-static-pages
+        url: null
         code: ''
+        reference: null
+        cmsPage: null
         replace: 1
         viewBag:
             isHidden: '0'
